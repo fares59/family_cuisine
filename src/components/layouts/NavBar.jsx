@@ -36,7 +36,7 @@ function NavBar() {
               <>
                 <li className="nav-item">
                   {" "}
-                  <Link className="nav-link" to="/account">
+                  <Link className="nav-link" to="/RenewPassword">
                     AccountRenewpassScreen
                   </Link>{" "}
                 </li>
