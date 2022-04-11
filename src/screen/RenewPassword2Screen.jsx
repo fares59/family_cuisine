@@ -1,25 +1,38 @@
-import { Link, useNavigate } from "react-router-dom";
+
+import { useSearchParams} from "react-router-dom";
+
 
 const RenewPassword2 = () => {
+  const [searchParams] = useSearchParams();
+  const token = searchParams.get("t");
   const handleSubmit = (event) => {
     event.preventDefault();
-    let password1 = document.getElementsByName("password1").value;
-    let password2 = document.getElementsByName("password2").value;
+    let password1 = document.getElementById("password1").value;
+    let password2 = document.getElementById("password2").value;
 
     if (password1 == password2) {
+      
       const form = event.currentTarget;
       const formData = new FormData(form);
       const jsonData = Object.fromEntries(formData.entries());
       const body = JSON.stringify(jsonData);
-      console.log(body);
+      
       fetch("http://localhost:5000/auth/renewpass", {
         method: "post",
         headers: {
           "content-type": "application/json",
         },
+        body : JSON.stringify({ token, password1}),  // met le token dans le body  (selection)
         
-        body,
+       
       });
+      
+           if(jsonData){
+               
+           
+            
+            // navigate('/Account');
+         }
     }
   };
     return (
@@ -34,7 +47,7 @@ const RenewPassword2 = () => {
                   <label>Nouveau mot de passe</label>
                   <input
                     type="password"
-                    name="password1"
+                    id="password1"
                     className="form-control"
                     placeholder="Votre mot de passe"
                   />
@@ -44,7 +57,7 @@ const RenewPassword2 = () => {
                   <label>retaper votre mot de passe</label>
                   <input
                     type="password"
-                    name="password2"
+                    id="password2"
                     className="form-control"
                     placeholder="Votre mot de passe"
                   />

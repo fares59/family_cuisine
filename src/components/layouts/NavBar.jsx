@@ -7,7 +7,7 @@ import Logo from "../Logo";
 function NavBar() {
   const { user } = useContext(UserContext);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
          <Logo/>
