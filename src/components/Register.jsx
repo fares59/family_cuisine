@@ -1,10 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Extenders } from '../../Extenders';
+import { Extenders } from '../Extenders';
 Extenders.init();
 
 function Register(props) {
-    const navigate= useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -23,8 +21,6 @@ function Register(props) {
                 const json = JSON.tryParse(text);
                 console.log(json);
             });
-            navigate("/Login");
-            
     }
 
     return (

@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/user_context";
 import Logo from "../Logo";
+import Auth from "../../context/Auth";
 
 
 function NavBar() {
+  // const { isAuthenticated } = useContext(Auth);
   const { user } = useContext(UserContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -42,18 +44,18 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   {" "}
-                  <Link className="nav-link" to="/AccountScreen">
+                  <Link className="nav-link" to="/Account">
                     AccountScreen
                   </Link>
                 </li>
                 <li className="nav-item">
                   {" "}
-                  <Link className="nav-link" to="/validationAccount">
+                  <Link className="nav-link" to="/ValidationAccount">
                     AccountValidationScreen
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/Register">
                     RegisterScreen
                   </Link>
                 </li>
@@ -63,7 +65,7 @@ function NavBar() {
             {user.id && (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/UserScreen">
+                  <Link className="nav-link" to="/User">
                     UserScreen
                   </Link>
                 </li>
@@ -73,7 +75,7 @@ function NavBar() {
             {(user.id && user.role >0) && (
               <li className="nav-item">
                 {" "}
-                <Link className="nav-link" to="/admin">
+                <Link className="nav-link" to="/Admin">
                   AdminScreen
                 </Link>
               </li>
@@ -82,13 +84,13 @@ function NavBar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             {user.id ? (
               <li className="nav-item">
-                <Link className="nav-link" to="/logout">
-                  logout {user.email}
+                <Link className="nav-link" to="/Logout">
+                  Logout {user.email}
                 </Link>
               </li>
             ) : (
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link" to="/Login">
                   Login
                 </Link>
               </li>

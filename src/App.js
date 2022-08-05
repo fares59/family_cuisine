@@ -15,12 +15,15 @@ import { UserContext } from "./context/user_context";
 import LogoutScreen from "./screen/LogoutScreen";
 
 
+
+
+
 function App() {
 
  
 
   const {user} = useContext(UserContext);
-  console.log(user.id);
+  console.log(user.Id_user,"Id");
 
   return (
     <BrowserRouter>
@@ -28,7 +31,7 @@ function App() {
 
         <Route path="/" element={<BaseScreen />}>
           <Route index element={<Acceuil />} />
-          {!user.id && 
+          {!user.Id_user && 
 
           <>
             <Route path="/Login" element={<LoginScreen />} />
@@ -36,12 +39,16 @@ function App() {
             <Route path="/RegisterValidation" element={<RegisterValidationScreen />} />
             <Route path="/RenewPassword" element={<RenewPasswordScreen />} />
             <Route path="/RenewPassword2" element={<RenewPassword2screen />} />
+            {/* <Route path="/Account" element={<AccountScreen />} /> */}
+            
+            
+            
 
            
           </>
           }
           
-          {user.id &&
+          {user.id_user && 
           <>
           //*si user id
             <Route path="/Account" element={<AccountScreen />} />
@@ -49,7 +56,7 @@ function App() {
             <Route path="/Logout" element={<LogoutScreen />} />
           </>
           }
-          {user.id && user.role >0 && user.role < 2 &&
+          {user.Id_user && user.role >0 && user.role < 2 &&
           <>
           //*user id et role
           <Route path="/Admin" element={<AdminScreen />} />

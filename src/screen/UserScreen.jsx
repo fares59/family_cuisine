@@ -1,8 +1,8 @@
-const UserScreen = () => {
+// const UserScreen = () => {
 
-    return (
-        <h1>UserScreen</h1>
-    );
-}
+//     return (
+//         <h1>UserScreen</h1>
+//     );
+// }
 
-export default UserScreen;
+// export default UserScreen;
