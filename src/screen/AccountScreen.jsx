@@ -22,7 +22,7 @@ const AccountScreen = (props) => {
     const [email, setemail] = useState("");
     const [isNewDelete, setNewDelete] = useState(false);
     const [mdp, setMdp] = useState("");
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();

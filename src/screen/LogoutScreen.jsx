@@ -9,8 +9,8 @@ const cookieStr = 'token=vide ; max-age=0';
 document.cookie = cookieStr;
 useEffect(() =>{
     setTimeout(()=>{
-        setUser ({});
-        navigate("/");
+        setUser ({user});
+        navigate("/Acceuil");
     },1000);
 }) 
     return (

@@ -6,8 +6,10 @@ import GenericCard from "../components/genericsCards/genericsCards";
 
 
 const Acceuil = () => {
+  
   return (
-    <GenericCard/>
+     <GenericCard/>
+     
 
     
     

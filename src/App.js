@@ -23,7 +23,7 @@ function App() {
  
 
   const {user} = useContext(UserContext);
-  console.log(user.Id_user,"Id");
+  console.log(user.id_user,"id");
 
   return (
     <BrowserRouter>
@@ -31,15 +31,16 @@ function App() {
 
         <Route path="/" element={<BaseScreen />}>
           <Route index element={<Acceuil />} />
-          {!user.Id_user && 
+          {!user.id_user && 
 
           <>
+          <Route path="/Acceuil" element={<Acceuil />} />
             <Route path="/Login" element={<LoginScreen />} />
             <Route path="/Register" element={<RegisterScreen />} />
             <Route path="/RegisterValidation" element={<RegisterValidationScreen />} />
             <Route path="/RenewPassword" element={<RenewPasswordScreen />} />
             <Route path="/RenewPassword2" element={<RenewPassword2screen />} />
-            {/* <Route path="/Account" element={<AccountScreen />} /> */}
+            <Route path="/Account" element={<AccountScreen />} />
             
             
             
@@ -56,7 +57,7 @@ function App() {
             <Route path="/Logout" element={<LogoutScreen />} />
           </>
           }
-          {user.Id_user && user.role >0 && user.role < 2 &&
+          {user.id_user && user.role >0 && user.role < 2 &&
           <>
           //*user id et role
           <Route path="/Admin" element={<AdminScreen />} />

@@ -48,7 +48,9 @@ const LoginScreen = () => {
                 const age = 60*60*24;
                 setCookie("token",jsonData.token,{maxAge:`${age}`});
                 setUser({role:jsonData.role, id:jsonData.id});
-                navigate('/Account');
+                console.log(jsonData.role);
+                navigate('/Acceuil');
+                
               }
             // if(jsonData){
                
