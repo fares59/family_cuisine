@@ -12,6 +12,7 @@ import { UserProvider } from './context/user_context';
 ReactDOM.render(
   <React.StrictMode>
     <UserProvider>
+      
     <App />
     </UserProvider>
   </React.StrictMode>,
