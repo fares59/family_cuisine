@@ -93,14 +93,14 @@ const LoginScreen = () => {
               </div>
               <div className="col-12">
                 <button type="submit" className="btn btn-dark float-end">
-                  Login
+                  login
                 </button>
               </div>
             </form>
             <hr className="mt-4" />
             <div className="col-12">
               <p className="text-center mb-0">
-                Pas encore de compte ? <Link to="/register">Créez en un</Link>
+                Pas encore de compte ? <Link to="/Register">Créez en un</Link>
               </p>
             </div>
           </div>

@@ -48,7 +48,9 @@ const LoginScreen = () => {
                 const age = 60*60*24;
                 setCookie("token",jsonData.token,{maxAge:`${age}`});
                 setUser({role:jsonData.role, id:jsonData.id});
-                navigate('/Account');
+                console.log(jsonData.role);
+                navigate('/Acceuil');
+                
               }
             // if(jsonData){
                
@@ -113,7 +115,7 @@ const LoginScreen = () => {
             <hr className="mt-4" />
             <div className="col-12">
               <p className="text-center mb-0">
-                Pas encore de compte ? <Link to="/register">Créez en un</Link>
+                Pas encore de compte ? <Link to="/Register">Créez en un</Link>
               </p>
             </div>
           </div>

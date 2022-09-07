@@ -6,3 +6,9 @@ const UserScreen = () => {
 }
 
 export default UserScreen;
+
+// export function UserScreen(){
+//     return (
+//         <div>user page</div>
+//     )
+// }

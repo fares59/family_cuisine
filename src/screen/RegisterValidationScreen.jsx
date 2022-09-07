@@ -10,6 +10,9 @@ const RegistertValidationScreen = () => {
 
   const navigate = useNavigate();
 
+
+
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("http://localhost:5000/auth/validate", {
@@ -26,12 +29,12 @@ const RegistertValidationScreen = () => {
         text: data.message,
       });
       if (data.completed) {
-        setTimeout(() => navigate("/login"), 4000);
-        // document
-        //   .querySelector(".alert")
-        //   .addEventListener("closed.bs.alert", function () {
-        //     navigate("/login");
-        //   });
+        setTimeout(() => navigate("/Login"), 4000);
+        document
+          .querySelector(".alert")
+          .addEventListener("closed.bs.alert", function () {
+            navigate("/Login");
+          });
       }
     };
     fetchData().catch(console.error);
@@ -41,18 +44,19 @@ const RegistertValidationScreen = () => {
     <>
       <h1>RegisterValidationScreen</h1>
       {message && (
-        <div
-          className={`alert ${message.color} alert-dismissible fade show mt-1`}
-          role="alert"
-        >
+        <div>
+          <p>
+            TEST
+          </p>
           {message.text}
-          {/* <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button> */}
-        </div>
+          {/* <form onSubmit={handleSubmit}>
+          <button type="submit" className="btn btn-dark float-end" >
+          Login
+        </button>
+          
+          </form> */}
+        </div> 
+        
       )}
     </>
   );

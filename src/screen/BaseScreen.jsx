@@ -10,6 +10,8 @@ const BaseScreen = () => {
     <>
     
       <NavBar/>
+
+      
       
       
       <main className="container">
