@@ -4,22 +4,10 @@ import { useCookies } from "react-cookie";
 import Logo from "../components/Logo";
 import GenericCard from "../components/genericsCards/genericsCards";
 
-
 const Acceuil = () => {
-  
-  return (
-     <GenericCard/>
-     
-
-    
-    
-
-  );
+  return <GenericCard />;
 };
 
 export default Acceuil;
-
-
-
 
 //todo ne pas oublier le RGPD contition utilisateur et cookies

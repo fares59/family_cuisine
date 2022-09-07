@@ -7,11 +7,12 @@ import Logo from "../Logo";
 function NavBar() {
   //const { isAuthenticated } = useContext(Auth);
   const { user } = useContext(UserContext);
+  console.log("user", user);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
       <div className="container-fluid">
      
-        <a href="#" className="navbar-brand" >
+        <a href="/#" className="navbar-brand" >
           <Logo />
         </a>
         <button
@@ -29,7 +30,7 @@ function NavBar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Acccueil
+                Accueil
               </Link>
             </li>
 
@@ -55,6 +56,12 @@ function NavBar() {
                     RegisterScreen
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link"  to="/Login">
+                    Login
+                  </Link>
+                  
+                </li>
               </>
             )}
 
@@ -66,6 +73,8 @@ function NavBar() {
                   </Link>
                 </li>
               </>
+
+              
             )}
 
             {user.role === 2 && (
@@ -77,19 +86,26 @@ function NavBar() {
             )}
           </ul>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-            {user.role === 1 ? (
+            {user.role === 1 && (
               <li className="nav-item">
-                <Link className="nav-link" to="/Logout">
-                  Logout {user.id_user}
+                
+                <Link className="nav-link" to="/Logout"> 
+                
+                  Logout 
                 </Link>
               </li>
-            ) : (
+            )} 
+
+            {user.role === 1 && (
               <li className="nav-item">
-                <Link className="nav-link" to="/Login">
-                  Login
+                
+                <Link className="nav-link" to="/Img"> 
+                
+                  Img 
                 </Link>
               </li>
             )}
+          
           </ul>
         </div>
       </div>

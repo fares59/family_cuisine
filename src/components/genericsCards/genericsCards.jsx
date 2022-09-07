@@ -110,7 +110,7 @@ const GenericCard = (props) => {
                 </button>
                 <div className="cont">
                   <div className="choice">
-                    <p>
+                    <div>
                     Servi avec votre choix de vinaigrette à part :
                       <br />
                       <span id="chDots1">- Cinq options...</span>
@@ -123,13 +123,13 @@ const GenericCard = (props) => {
                           <li>moutarde au miel</li>
                         </span>
                       </ul>
-                    </p>
+                    </div>
                     <button onClick={chBtnFunc1} id="chBtn1">
                     Afficher
                     </button>
                   </div>
                   <br />
-                  <div class="add">
+                  <div className="add">
                     <p>
                     Ajoutez votre choix de protéines pour <strong>$2</strong> plus.
                     </p>
@@ -178,7 +178,7 @@ const GenericCard = (props) => {
                 </button>
                 <div className="cont">
                   <div className="choice">
-                    <p>
+                    <div>
                     Servi avec votre choix de vinaigrette à part :
                       <br />
                       <span id="chDots1">- Cinq options...</span>
@@ -191,13 +191,13 @@ const GenericCard = (props) => {
                           <li>moutarde au miel</li>
                         </span>
                       </ul>
-                    </p>
+                    </div>
                     <button onClick={chBtnFunc1} id="chBtn1">
                     Afficher
                     </button>
                   </div>
                   <br />
-                  <div class="add">
+                  <div className="add">
                     <p>
                     Ajoutez votre choix de protéines pour <strong>$2</strong> plus.
                     </p>
@@ -244,7 +244,7 @@ const GenericCard = (props) => {
                 </button>
                 <div className="cont">
                   <div className="choice">
-                    <p>
+                    <div>
                     Servi avec votre choix de vinaigrette à part :
                       <br />
                       <span id="chDots1">- Cinq options...</span>
@@ -257,13 +257,13 @@ const GenericCard = (props) => {
                           <li>moutarde au miel</li>
                         </span>
                       </ul>
-                    </p>
+                    </div>
                     <button onClick={chBtnFunc1} id="chBtn1">
                     Afficher
                     </button>
                   </div>
                   <br />
-                  <div class="add">
+                  <div className="add">
                     <p>
                     Ajoutez votre choix de protéines pour <strong>$2</strong> plus.
                     </p>

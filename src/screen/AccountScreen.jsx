@@ -1,15 +1,3 @@
-// function AccountScreen(props){
-
-//     return(
-//         <>
-//             <h2 className="pageTitle lettre-space-5">Account Screen</h2>
-//         </>
-//     )
-// }
-// export default AccountScreen;
-
-
-
 import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -56,6 +44,7 @@ const AccountScreen = (props) => {
 
 
     const deleteUser = () => {
+        /* A ternary operator. It is a shorthand way of writing an if/else statement. */
         const newDelete = isNewDelete
         ? mdp.slice(0, -1)
         : email.slice(0, -1);

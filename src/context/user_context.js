@@ -6,7 +6,7 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
 
     const [cookie] = useCookies(['token']);
-    const [user, setUser] = useState({}) //!state local dispo dans le provider
+    const [user, setUser] = useState({role:0}) //!state local dispo dans le provider
 
 //**** on va fetch les données utilisateur grace au token contenu dans le cookie****/
     useEffect(() =>{
@@ -30,13 +30,14 @@ const UserProvider = ({ children }) => {
             .then((jsonData) => {
                 console.log("réponse app update token ", jsonData);
                 //let result;
-                if (jsonData.id) {
+                if (jsonData.user) {
                     let temp = 
                     {
-                   
+                        "user":{
                             "id": jsonData.id,
                             "role": jsonData.role,
                             "email":jsonData.email
+                        }
                             
                         
                     }
